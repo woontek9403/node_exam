@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+.information{
+    color: red;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.form-group{
+    margin-bottom: 0px; 
+}
+.form-control.year{
+    display: inline-block;
+    width: 33%;
+
+}
+.form-control.month{
+    display: inline-block;
+    width: 33%;
+
+}
+.form-control.day{
+    display: inline-block;
+    width: 33%;
+
+}
+.form-control.countrycode{
+    display: inline-block;
+    width: 20%;
+
+}
+.form-control.countrycode, .form-control.countrycode[readonly]{
+    background-color: white;
+}
+.form-control.number{
+    display: inline-block;
+    width: 60%;
+
+}
+.form-control.certification{
+    display: inline-block;
+    width: 19%;
+
+}

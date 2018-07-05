@@ -1,0 +1,32 @@
+@charset 'utf-8';
+.back{
+    background-image:url(../img/하이데_지그린트.jpg);
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-position:50% 50%;
+    opacity: 1;
+    z-index: -1;
+    
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+#demo{
+    width: 50%;
+}
+#demo{
+    width: 50%;
+}
+.title{
+    z-index: 10;
+}
+#close-sidenav{
+    color: black;
+    font-size: 30px;
+    
+}
