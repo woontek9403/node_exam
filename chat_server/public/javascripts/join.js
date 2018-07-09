@@ -1,5 +1,5 @@
 
-var formTag = document.getElementById('formTag')
+var formTag = document.getElementById('formTag');
 formTag.onsubmit = function(){
         //ID가 usr인 객체를 가져와서 그 객체의 value를 ID에 저장
         
@@ -10,7 +10,6 @@ formTag.onsubmit = function(){
         var year = document.getElementById('year').value;
         var month = document.getElementById('month').value;
         var day = parseInt(document.getElementById('day').value);
-        var max = maxDay(month);
         var Number = document.getElementById('Number').value;
         var NumberRegex = /^010\d{8}$/;
 
@@ -29,7 +28,7 @@ formTag.onsubmit = function(){
             isOk = false;
         }
 
-        //pwd 유효성 검사
+        //Pwd 유효성 검사
         if(!checkValidPw(Pwd)){
             isOk = false;
         }
@@ -74,7 +73,7 @@ function checkValidId(id){
 
 // 비밀번호
 function checkValidPw(Pwd){
-    var PwdRegex = /^(?=w{8,20}$)\w*(\d[A-z]|[A-z]\d)\w*$/;
+    var PwdRegex = /^(?=\w{8,20}$)\w*(\d[A-z]|[A-z]\d)\w*$/;
     var inforPwd = document.getElementById('inforPwd');
     inforPwd.style.display = 'none';
         if(Pwd.length == 0 || !PwdRegex.test(Pwd)){
@@ -86,7 +85,7 @@ function checkValidPw(Pwd){
 
 
 // 비밀번호 체크 (비밀번호와 비밀번호 확인 같은지 검사 )  
-//(pwd 와 비밀번호 일치하지 않을때 보여줄 문구가 필요함)
+//(Pwd 와 비밀번호 일치하지 않을때 보여줄 문구가 필요함)
 function checkValidPwdConfirm(PwdConfirm){
     // 비밀번호
     var Pwd = document.getElementById('Pwd').value;

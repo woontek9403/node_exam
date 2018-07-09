@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/swiper.css">
+    <link rel="stylesheet" href="/stylesheets/nav2.css">
+    <title>Document</title>
+</head>
+<body>
+          
+        <!-- 상단내용 (네비게이션 바) -->
+        <div class="swiper-container tabMenu">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1">대통령 기념관</div>
+                <div class="swiper-slide" data-hash="slide2">하늘 정원</div>
+                <div class="swiper-slide" data-hash="slide3">국화 축제</div>
+          </div>
+        </div>
+
+
+        <!-- 하단 내용 -->
+        <div class="swiper-container tabContents">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-hash="slide1">대통령 기념관</div>
+                    <div class="swiper-slide" data-hash="slide2">하늘 정원</div>
+                    <div class="swiper-slide" data-hash="slide3">국화 축제</div>
+        </div>
+        </div>
+        <script>
+        var tabMenu =new Swiper('.tabMenu',{
+            spaceBetween:30,
+            centeredSlides : true,
+            slidesPerView: 'auto',
+            touchRatio : 0.2,
+            slideToClickedSlide: true,
+            hashNavigation : true,
+        });
+        var tabContents = new Swiper('.tabContents',{
+            spaceBetween : 10,
+            hashNavigation : true,
+        });    
+            //tabContents 클래스를 사용시 tabMenu가 같이 사용된다
+            tabContents.controller.control = tabMenu;
+            // //tabContents 클래스를 사용시 tabContents가 같이 사용된다
+            tabMenu.controller.control = tabContents;
+   
+        </script>
+  
+          
+</body>
+</html>

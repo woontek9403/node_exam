@@ -1,0 +1,107 @@
+@charset 'utf-8';
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body{
+    font-family: "Nanum GOthic", sans-serif;
+}
+
+.background-images{ /* 백그라운드 이미지*/
+    content: '';
+    width: auto; 
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-position:50% 50%;
+    opacity: 0.4;
+    animation-name: aniBackground;
+    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: aniBackground;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+}
+.container-fluid{
+    padding: 0 10%;
+    color: #fff;
+    background: none;
+    position: relative;
+}
+.title{
+    font-weight: bold;
+    text-align: center;
+}
+.address{
+    text-align: center;
+    color: yellow;
+    font-size: 20px;
+    margin: 40px 0 0 0;
+}
+.font-yello{
+    color: yellow;
+}
+.contents{
+    height: 300px;
+    overflow: auto;
+    margin: 20px 0;
+}
+.btn{
+    background: none;
+    border: solid yellow 2px;
+    width: 100%;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+.btn:nth-child(3){ /* btn 태그 위에서 3번째에 있는 클래스에  css에 적용시킨다*/
+    width: 48%;
+    float: left;
+
+}
+.btn:nth-child(4){ /* btn 태그 위에서 4번째에 있는 클래스에  css에 적용시킨다*/
+    width: 48%;
+    float: right;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+.main{
+    animation-name: anicontents;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: anicontents;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+}
+/*아이디*/
+#body{
+    background: rgb(0,0,0,1); 
+}
+
+/*  애니메이션 */
+@keyframes aniBackground{
+
+        0%{background-image: url(/images/main_visual_img03.gif); }
+        33%{background-image: url(/images/main_visual_img04.gif); }
+        66%{background-image: url(/images/main_visual_img05.gif); }
+        100%{background-image: url(/images/main_visual_img03.gif); }
+}
+@-webkit-keyframes aniBackground{
+        0%{background-image: url(/images/main_visual_img03.gif); }
+        33%{background-image: url(/images/main_visual_img04.gif); }
+        66%{background-image: url(/images/main_visual_img05.gif); }
+        100%{background-image: url(/images/main_visual_img03.gif); }
+    }
+@keyframes anicontents{
+    for{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}

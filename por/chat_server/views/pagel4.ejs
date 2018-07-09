@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="images/icon32x32.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icon114x114.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/pagel.css">
+    <link rel="stylesheet" href="/stylesheets/swiper.css">
+    <link rel="stylesheet" href="/stylesheets/nav2.css">
+    <title></title>
+</head>
+<body>
+    <!-- 제일 위에있는  -->
+        <nav class="main-nav">
+            <button class="back"><i class="fas fa-angle-left"></i></button>
+            <span class="title">고객 센터</span>
+            <div id="hamburger-wrapper">
+                <span id="hamburger"><i class="fas fa-bars"></i></span>
+            </div>
+        </nav>
+        
+        <div class="swiper-container tabMenu">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1">계곡/폭포</div>
+                <div class="swiper-slide" data-hash="slide2">공원/명산</div>
+                <div class="swiper-slide" data-hash="slide3">유원지</div>
+                <div class="swiper-slide" data-hash="slide4">휴양지</div>
+                <div class="swiper-slide" data-hash="slide5">휴양림</div>
+                <div class="swiper-slide" data-hash="slide6">사찰/사적</div>
+                <div class="swiper-slide" data-hash="slide7">약수/온천</div>
+                <div class="swiper-slide" data-hash="slide8">강/호수</div>
+          </div>
+        </div>
+
+  <!-- 본문  -->
+  
+  <!-- swiper 활용 div -->
+  <div class="swiper-container tabContents">
+      <div class="swiper-wrapper">
+        </div>
+        </div>
+          <nav id="sidenav">
+              <header><span id="close-sidenav">&times;</span></header>
+              <ul>
+                  <li><a href="main">청남대 소개
+                      <span class="arrows"><i class="fas fa-angle-right "></i></span></a>
+                  </li>
+                  <li><a href="pagel1">청남대 지도보기
+                      <span class="arrows"><i class="fas fa-angle-right "></i></span></a>
+                  </li>
+                  <li><a href="pagel2">청남대 둘러보기
+                      <span class="arrows"><i class="fas fa-angle-right "></i></span></a>
+                  </li>
+                  <li><a href="pagel3">주변관광정보
+                      <span class="arrows"><i class="fas fa-angle-right "></i></span></a>
+                  </li>
+                  <li><a href="pagel4">고객센터
+                      <span class="arrows"><i class="fas fa-angle-right "></i></span></a>
+                  </li>
+              </ul>
+          </nav>
+          
+          <script src="/javascripts/pagle.js"></script>
+   
+       
+
+        <script>
+            var tabMenu =new Swiper('.tabMenu',{
+                spaceBetween:30,
+                centeredSlides : true,
+                slidesPerView: 'auto',
+                touchRatio : 0.2,
+                slideToClickedSlide: true,
+                hashNavigation : true,
+            });
+            var tabContents = new Swiper('.tabContents',{
+                spaceBetween : 10,
+                hashNavigation : true,
+            });    
+                //tabContents 클래스를 사용시 tabMenu가 같이 사용된다
+                tabContents.controller.control = tabMenu;
+                // //tabMenu 클래스를 사용시 tabContents가 같이 사용된다
+                tabMenu.controller.control = tabContents;
+       
+            </script>
+</body>
+</html>

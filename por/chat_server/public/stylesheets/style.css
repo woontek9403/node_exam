@@ -1,0 +1,123 @@
+.bacimg{
+    border-image: url(/images/main_visual_img04.gif);
+    width : max;
+    height: max;
+    background-image: url(/images/main_visual_img03.gif);
+    background-size: cover;
+    animation-name : bac;
+    animation-duration : 10s;
+    animation-iteration-count : infinite;
+    -webkit-animation-name : bac;
+    -webkit-animation-duration : 10s;
+    -webkit-animation-iteration-count : infinite;
+    
+}
+@keyframes bac{
+
+    0%{background-image: url(/images/main_visual_img03.gif); }
+    33%{background-image: url(/images/main_visual_img04.gif); }
+    66%{background-image: url(/images/main_visual_img05.gif); }
+    100%{background-image: url(/images/main_visual_img03.gif); }
+   
+}
+.link{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+}
+
+.btn {
+    font-size: 150%;
+    margin-top: 50%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  border : solid yellow 1px;
+  height: 40px;  
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.5);
+  display: block;
+}
+.btn1{
+    font-size: 150%;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  border : solid yellow 1px;
+  height: 40px;  
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+.btn2{
+    margin-top: 5px;
+    font-size: 150%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  border : solid yellow 1px;
+  height: 50px;
+  width: 48%;
+  background-color: rgba(0, 0, 0,0.5);
+  display: block;
+  float: left;
+}
+.btn3{
+    margin-top: 5px;
+    font-size: 150%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  border : solid yellow 1px; 
+  height: 50px; 
+  width: 48%;
+  background-color: rgba(0, 0, 0,0.5);
+  display: block;
+  float: right;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+.text0{
+    margin: 3%;
+    font-size: 110%;
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    width: 80%;
+    color: white;
+    height: 200px;
+    background-color: rgba(0, 0, 0,0.5);
+    overflow:auto; 
+}
+.text1{
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0,0.1);
+    color: white;
+    font-size: 250%;
+    margin-top: 5px;
+}
+.text2{
+    text-align: center;
+    background-color: rgba(0, 0, 0,0.1);
+    color: darkgoldenrod;
+    font-size: 180%;
+    margin-top: 5px;
+}
+.contents{
+    /* background : none; */
+    /* position: relative; */
+    /* overflow: hidden; */
+    animation-name: aniCont;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: aniCont;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-delay: 0;
+    -webkit-animation-fill-mode: forwards; 
+}

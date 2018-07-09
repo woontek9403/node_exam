@@ -1,0 +1,22 @@
+@charset 'utf-8';
+body{
+    font-family: 'Nanum Gothic' , sans-serif;
+};
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@keyframes bac{
+
+    0%{background-image: url(/images/main_visual_img03.gif); }
+    33%{background-image: url(/images/main_visual_img04.gif); }
+    66%{background-image: url(/images/main_visual_img05.gif); }
+    100%{background-image: url(/images/main_visual_img03.gif); }
+}
+@keyframes bac{
+
+    0%{background-image: url(/images/main_visual_img03.gif); }
+    33%{background-image: url(/images/main_visual_img04.gif); }
+    66%{background-image: url(/images/main_visual_img05.gif); }
+    100%{background-image: url(/images/main_visual_img03.gif); }
+    }

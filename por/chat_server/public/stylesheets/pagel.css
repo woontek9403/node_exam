@@ -1,0 +1,104 @@
+body { margin: 0; padding: 0; }
+body.dark { background: rgba(0,0,0,.4); }
+
+#hamburger-wrapper {
+  float: right;
+  padding: 3px 10px;
+  z-index: 1;
+}
+#hamburger {
+  cursor: pointer;
+  
+}
+#close-sidenav {
+  cursor: pointer;
+  font-size: 2em;
+  margin-top: -15px;
+  float: right;
+}
+#sidenav {
+  height: 100%; width: 260px;
+  top: 0; right: -260px;
+  background: white;
+  position: fixed;
+  transition: 0.4s;
+}
+#sidenav ul { 
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+}
+#sidenav a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  height: 50px;
+}
+#sidenav header { 
+    background: rgb(31, 31, 31); 
+    display: block;
+    height: 128px;
+    color: white;
+    background-image: url(/images/top_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 200px auto;*/
+}
+#sidenav a:hover { 
+    background-color: wheat;
+    color: violet;
+    border-bottom: solid 1px #ccc;
+    font-weight: bold;
+}
+#sidenav li{
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+    height: 50px;
+}
+.arrows{
+  float: right;
+}
+.main-nav{
+  background-color: #ffd800;
+  font-size: 22px;
+  height: 45px;
+  text-align: center;
+}
+.back{
+  border: none;
+  background: none;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  float: left;
+}
+.title{
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.menu{
+  height: 40px;
+  background-color: #2f2f2d;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+}
+.inner-menu{
+  display: inline-block;
+  margin-right: 15px;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-contents{
+  padding: 0 10px;
+}
+.sub-title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.text1{ text-align: center; }

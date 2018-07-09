@@ -1,0 +1,13 @@
+.tabMenu{
+    background: #2f2d2d;
+    color: #fff;
+}
+.tabMenu .swiper-slide-active,
+.tabMenu .active{
+    color: #ffd800;
+}
+.tabMenu .swiper-slide{
+    display: inline-block;
+    width: auto;
+    padding: 10px 0;
+}

@@ -29,9 +29,24 @@ router.get('/', function(req, res, next) {
                 throw err;
             }
             //index.ejs를 클라이언트 화면에 표시할때 데이터베이스 검색 결과인 rows도 같이 전달한다.
-            res.render('index', { rows : rows });
-            connection.release();
+            // res.render('index', { rows : rows });
+            if(req.session.user) {
+                    //사용자 정보가 있는경우
+                    //로그인이 되어있다면
+                    //index.ejs 호출후 사용자 아이디 전달
+                    //사용자 아이디(req.session.user.user_id)를 전달함 
+                res.render('index' , {rows : rows , is_logined : true , 
+                    login_id : req.session.user.user_id});
+                } else{
+                    // 사용자 정보가 있는경우
+                    //로그인이 되어 있지않았다면
+                    //index.ejs 를 표시하는데
+                    //로그인 되어 있지않음,
+                    res.render('index' , {rows : rows , is_logined : false ,
+                        login_id : "" });
+                }
             
+            connection.release();     
         });
     });
   
